@@ -9,4 +9,7 @@
 
     <bean id="invalidBean" class="xx.xxxx.xx">
     </bean>
+
+    <bean id="prototypeBean" class="org.litespring.service.v1.PrototypeService" scope="prototype">
+    </bean>
 </beans>

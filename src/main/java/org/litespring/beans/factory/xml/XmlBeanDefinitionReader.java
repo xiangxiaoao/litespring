@@ -7,7 +7,7 @@ import org.litespring.beans.BeanDefinition;
 import org.litespring.beans.factory.BeanDefinitionStoreException;
 import org.litespring.beans.factory.support.BeanDefinitionRegistry;
 import org.litespring.beans.factory.support.GenericBeanDefinition;
-import org.litespring.util.ClassUtils;
+import org.litespring.core.io.Resource;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,6 +17,8 @@ public class XmlBeanDefinitionReader {
     public static final String ID_ATTRIBUTE = "id";
 
     public static final String CLASS_ATTRIBUTE = "class";
+
+    public static final String SCOPE_ATTRIBUTE = "scope";
 
     BeanDefinitionRegistry registry;
 
@@ -32,11 +34,10 @@ public class XmlBeanDefinitionReader {
         this.registry = registry;
     }
 
-    public void loadBeanDefinitions(String configFile) {
+    public void loadBeanDefinitions(Resource resource) {
         InputStream is = null;
         try {
-            ClassLoader cl = ClassUtils.getDefaultClassLoader();
-            is = cl.getResourceAsStream(configFile);
+            is = resource.getInputStream();
             SAXReader reader = new SAXReader();
             Document doc = reader.read(is);
             Element root = doc.getRootElement();//<beans>
@@ -45,8 +46,12 @@ public class XmlBeanDefinitionReader {
                 Element ele = (Element) iter.next();
                 String id = ele.attributeValue(ID_ATTRIBUTE);
                 String beanClassName = ele.attributeValue(CLASS_ATTRIBUTE);
+                String scope = ele.attributeValue(SCOPE_ATTRIBUTE);
                 BeanDefinition bd = new GenericBeanDefinition(id, beanClassName);
-                this.registry.registerBeanDefinition(id,bd);
+                if (scope != null) {
+                    bd.setScope(scope);
+                }
+                this.registry.registerBeanDefinition(id, bd);
             }
         } catch (Exception e) {
             throw new BeanDefinitionStoreException("IOException parsing XML document error.", e);
