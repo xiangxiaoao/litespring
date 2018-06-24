@@ -6,7 +6,6 @@ import org.litespring.context.ApplicationContext;
 import org.litespring.context.support.ClassPathXmlApplicationContext;
 import org.litespring.context.support.FileSystemXmlApplication;
 import org.litespring.service.v1.PetStoreService;
-import org.litespring.util.ClassUtils;
 
 public class ApplicationContextTest {
 
@@ -19,7 +18,9 @@ public class ApplicationContextTest {
 
     @Test
     public void testGetBeanFromFileSystemContext(){
-        ApplicationContext ctx = new FileSystemXmlApplication(ClassUtils.getDefaultClassLoader().getResource("petstore-v1.xml").getPath());
+//        ApplicationContext ctx = new FileSystemXmlApplication(ClassUtils.getDefaultClassLoader().getResource("petstore-v1.xml").getPath());
+//       用相对路径
+        ApplicationContext ctx = new FileSystemXmlApplication("src\\test\\resources\\petstore-v1.xml");
         PetStoreService petStore = (PetStoreService) ctx.getBean("petStore");
         Assert.assertNotNull(petStore);
     }

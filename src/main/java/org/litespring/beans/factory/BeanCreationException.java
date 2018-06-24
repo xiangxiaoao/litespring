@@ -1,4 +1,7 @@
 package org.litespring.beans.factory;
+/**
+ * bean生成create的时候的异常类
+ */
 
 import org.litespring.beans.BeansException;
 

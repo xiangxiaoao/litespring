@@ -2,10 +2,17 @@ package org.litespring.beans.factory.support;
 
 
 import org.litespring.beans.BeanDefinition;
+import org.litespring.beans.PropertyValue;
+import org.litespring.beans.SimpleTypeConverter;
 import org.litespring.beans.factory.BeanCreationException;
+import org.litespring.beans.factory.BeanDefinitionoValueResolver;
 import org.litespring.beans.factory.config.ConfigurableBeanFactory;
 import org.litespring.util.ClassUtils;
 
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -44,6 +51,16 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     private Object createBean(BeanDefinition bd) {
+        //创建实例 instantiate：实例化
+        Object bean = instantiateBean(bd);
+
+        //设置属性 populate:填充
+        populateBean(bd, bean);
+
+        return bean;
+    }
+
+    private Object instantiateBean(BeanDefinition bd) {
         ClassLoader cl = this.getBeanClassLoader();
         String beanClassName = bd.getBeanClassName();
         try {
@@ -51,6 +68,38 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
             return clz.newInstance();
         } catch (Exception e) {
             throw new BeanCreationException("Create bean for" + beanClassName + " failed", e);
+        }
+    }
+
+    private void populateBean(BeanDefinition bd, Object bean) {
+        List<PropertyValue> pvs = bd.getPropertyValues();
+        if (pvs == null || pvs.isEmpty()) {
+            return;
+        }
+        BeanDefinitionoValueResolver resolver = new BeanDefinitionoValueResolver(this);
+        SimpleTypeConverter converter = new SimpleTypeConverter();
+        try {
+            for (PropertyValue pv : pvs) {
+                String propertyName = pv.getName();
+                // RuntimeBeanReference 对象 或者  TypedStringValue 对象
+                Object originalValue = pv.getValue();
+                //转化为真正的对象实例
+                Object resolveValue = resolver.resolveValueIfNecessary(originalValue);
+
+                //获取bean的信息，然后获取bean的所有属性，然后将resolveValue 设置set进去
+                //PropertyDescriptor （属性描述器）类表示 JavaBean 类通过存储器导出一个属性
+                BeanInfo beanInfo = Introspector.getBeanInfo(bean.getClass());
+                PropertyDescriptor[] pds = beanInfo.getPropertyDescriptors();
+                for (PropertyDescriptor pd : pds) {
+                    if (pd.getName().equals(propertyName)) {
+                        Object convertedValue = converter.convertIfNecessary(resolveValue, pd.getPropertyType());
+                        pd.getWriteMethod().invoke(bean, convertedValue);
+                        break;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            throw new BeanCreationException("Failed to obtain BeanInfo for class[" + bd.getBeanClassName() + "]", e);
         }
     }
 
