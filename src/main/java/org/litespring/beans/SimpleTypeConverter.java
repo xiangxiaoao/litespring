@@ -8,6 +8,9 @@ import java.beans.PropertyEditor;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 类型转换的实现类，把字符串变成数字类型或者布尔类型
+ */
 public class SimpleTypeConverter implements TypeConverter {
     private Map<Class<?>, PropertyEditor> defaultEditors;
 

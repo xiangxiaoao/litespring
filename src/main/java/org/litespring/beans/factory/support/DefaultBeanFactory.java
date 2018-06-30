@@ -2,11 +2,8 @@ package org.litespring.beans.factory.support;
 
 
 import org.apache.commons.beanutils.BeanUtils;
-import org.litespring.beans.BeanDefinition;
-import org.litespring.beans.PropertyValue;
-import org.litespring.beans.SimpleTypeConverter;
+import org.litespring.beans.*;
 import org.litespring.beans.factory.BeanCreationException;
-import org.litespring.beans.factory.BeanDefinitionValueResolver;
 import org.litespring.beans.factory.config.ConfigurableBeanFactory;
 import org.litespring.util.ClassUtils;
 
@@ -52,6 +49,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     private Object createBean(BeanDefinition bd) {
+
         //创建实例 instantiate：实例化
         Object bean = instantiateBean(bd);
 
@@ -65,13 +63,19 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     private Object instantiateBean(BeanDefinition bd) {
-        ClassLoader cl = this.getBeanClassLoader();
-        String beanClassName = bd.getBeanClassName();
-        try {
-            Class<?> clz = cl.loadClass(beanClassName);
-            return clz.newInstance();
-        } catch (Exception e) {
-            throw new BeanCreationException("Create bean for" + beanClassName + " failed", e);
+        //判断BeanDefinition是否有构造器注入
+        if(bd.hasConstructorArgumentValues()){
+            ConstructorResolver resolver = new ConstructorResolver(this);
+            return resolver.autowireConstructor(bd);
+        }else {
+            ClassLoader cl = this.getBeanClassLoader();
+            String beanClassName = bd.getBeanClassName();
+            try {
+                Class<?> clz = cl.loadClass(beanClassName);
+                return clz.newInstance();
+            } catch (Exception e) {
+                throw new BeanCreationException("Create bean for" + beanClassName + " failed", e);
+            }
         }
     }
 
@@ -81,7 +85,8 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
             return;
         }
         BeanDefinitionValueResolver resolver = new BeanDefinitionValueResolver(this);
-        SimpleTypeConverter converter = new SimpleTypeConverter();
+        //SimpleTypeConverter converter = new SimpleTypeConverter();
+        TypeConverter converter = new SimpleTypeConverter();
         try {
             for (PropertyValue pv : pvs) {
                 String propertyName = pv.getName();

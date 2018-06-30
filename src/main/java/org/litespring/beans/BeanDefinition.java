@@ -13,4 +13,10 @@ public interface BeanDefinition {
     public String getBeanClassName();
 
     public List<PropertyValue> getPropertyValues();
+
+    public ConstructorArgument getConstructorArgument();
+
+    public String getID();
+
+    public boolean hasConstructorArgumentValues();
 }

@@ -6,7 +6,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         ApplicationTestV2.class,
-        BeanDefinitionoValueResolverTest.class,
+        BeanDefinitionValueResolverTest.class,
         BeanDefinitionTestV2.class,
         CustomBooleanEditorTest.class,
         CustomNumberEditorTest.class,

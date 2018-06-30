@@ -8,6 +8,7 @@ import org.litespring.test.v2.V2AllTests;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         V1AllTests.class,
+        V2AllTests.class,
         V2AllTests.class
 })
 public class AllTests {
