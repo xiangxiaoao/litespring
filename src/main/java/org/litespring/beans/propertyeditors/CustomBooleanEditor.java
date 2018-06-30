@@ -29,7 +29,7 @@ public class CustomBooleanEditor extends PropertyEditorSupport {
             //Treat empty String as null value
             setValue(null);
         }
-        if (VALUE_TRUE.equalsIgnoreCase(input) || VALUE_ON.equalsIgnoreCase(input) || VALUE_YES.equalsIgnoreCase(input) || VALUE_1.equals(input)) {
+        else if (VALUE_TRUE.equalsIgnoreCase(input) || VALUE_ON.equalsIgnoreCase(input) || VALUE_YES.equalsIgnoreCase(input) || VALUE_1.equals(input)) {
             setValue(Boolean.TRUE);
         } else if (VALUE_FALSE.equalsIgnoreCase(input) || VALUE_OFF.equalsIgnoreCase(input) || VALUE_NO.equalsIgnoreCase(input) || VALUE_0.equals(input)) {
             setValue(Boolean.FALSE);

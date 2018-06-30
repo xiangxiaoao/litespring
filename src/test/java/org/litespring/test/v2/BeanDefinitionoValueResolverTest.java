@@ -3,7 +3,7 @@ package org.litespring.test.v2;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.litespring.beans.factory.BeanDefinitionoValueResolver;
+import org.litespring.beans.factory.BeanDefinitionValueResolver;
 import org.litespring.beans.factory.config.RuntimeBeanReference;
 import org.litespring.beans.factory.config.TypedStringValue;
 import org.litespring.beans.factory.support.DefaultBeanFactory;
@@ -13,14 +13,14 @@ import org.litespring.dao.v2.AccountDao;
 
 public class BeanDefinitionoValueResolverTest {
 
-    BeanDefinitionoValueResolver resolver = null;
+    BeanDefinitionValueResolver resolver = null;
 
     @Before
     public void setUp(){
         DefaultBeanFactory factory = new DefaultBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
         reader.loadBeanDefinitions(new ClassPathResource("petstore-v2.xml"));
-        resolver = new BeanDefinitionoValueResolver(factory);
+        resolver = new BeanDefinitionValueResolver(factory);
     }
 
     @Test
