@@ -10,7 +10,7 @@ import java.util.List;
 public class GenericBeanDefinition implements BeanDefinition {
     private String id;
     private String beanClassName;
-
+    private Class<?> beanClass;
     private boolean singleton = true;
     private boolean prototype = false;
     private String scope = SCOPE_DEFAULT;
@@ -41,9 +41,9 @@ public class GenericBeanDefinition implements BeanDefinition {
     }
 
     public void setScope(String scope) {
-          this.scope = scope;
-          this.singleton = SCOPE_SINGLETON.equals(scope) || SCOPE_DEFAULT.equals(scope);
-          this.prototype = SCOPE_PROTOTYPE.equals(scope);
+        this.scope = scope;
+        this.singleton = SCOPE_SINGLETON.equals(scope) || SCOPE_DEFAULT.equals(scope);
+        this.prototype = SCOPE_PROTOTYPE.equals(scope);
     }
 
     public String getBeanClassName() {
@@ -63,6 +63,35 @@ public class GenericBeanDefinition implements BeanDefinition {
     }
 
     public boolean hasConstructorArgumentValues() {
-       return !this.constructorArgument.isEmpty();
+        return !this.constructorArgument.isEmpty();
+    }
+
+    public Class<?> resolveBeanClass(ClassLoader classLoader) throws ClassNotFoundException {
+        String className = getBeanClassName();
+        if (className == null) {
+            return null;
+        }
+        Class<?> resolvedClass = classLoader.loadClass(className);
+        this.beanClass = resolvedClass;
+        return resolvedClass;
+    }
+
+    public Class<?> getBeanClass() throws IllegalStateException {
+        if (this.beanClass == null) {
+            throw new IllegalStateException("Bean class name [" + this.getBeanClassName() + "] has not been resolved into an actual class");
+        }
+        return this.beanClass;
+    }
+
+    public boolean hasBeanClass() {
+        return false;
+    }
+
+    public void setBeanClassName(String beanClassName) {
+        this.beanClassName = beanClassName;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

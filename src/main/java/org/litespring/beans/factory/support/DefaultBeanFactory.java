@@ -2,14 +2,21 @@ package org.litespring.beans.factory.support;
 
 
 import org.apache.commons.beanutils.BeanUtils;
-import org.litespring.beans.*;
+import org.litespring.beans.BeanDefinition;
+import org.litespring.beans.PropertyValue;
+import org.litespring.beans.SimpleTypeConverter;
+import org.litespring.beans.TypeConverter;
 import org.litespring.beans.factory.BeanCreationException;
+import org.litespring.beans.factory.config.BeanPostProcessor;
 import org.litespring.beans.factory.config.ConfigurableBeanFactory;
+import org.litespring.beans.factory.config.DependencyDescriptor;
+import org.litespring.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.litespring.util.ClassUtils;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,6 +27,8 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>();
 
     private ClassLoader beanClassLoader;
+
+    private List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
 
     public DefaultBeanFactory() {
     }
@@ -64,10 +73,10 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
 
     private Object instantiateBean(BeanDefinition bd) {
         //判断BeanDefinition是否有构造器注入
-        if(bd.hasConstructorArgumentValues()){
+        if (bd.hasConstructorArgumentValues()) {
             ConstructorResolver resolver = new ConstructorResolver(this);
             return resolver.autowireConstructor(bd);
-        }else {
+        } else {
             ClassLoader cl = this.getBeanClassLoader();
             String beanClassName = bd.getBeanClassName();
             try {
@@ -80,6 +89,11 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     private void populateBean(BeanDefinition bd, Object bean) {
+        for (BeanPostProcessor postProcessor : this.getBeanPostProcessors()) {
+            if (postProcessor instanceof InstantiationAwareBeanPostProcessor) {
+                ((InstantiationAwareBeanPostProcessor) postProcessor).postProcessPropertyValues(bean, bd.getID());
+            }
+        }
         List<PropertyValue> pvs = bd.getPropertyValues();
         if (pvs == null || pvs.isEmpty()) {
             return;
@@ -113,7 +127,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     //用Commons BeanUtils工具包来实现类型转换与注入
-    private void populateBeanUseCommonBeanUtils(BeanDefinition bd, Object bean){
+    private void populateBeanUseCommonBeanUtils(BeanDefinition bd, Object bean) {
         List<PropertyValue> pvs = bd.getPropertyValues();
         if (pvs == null || pvs.isEmpty()) {
             return;
@@ -127,7 +141,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
                 //转化为真正的对象实例
                 Object resolveValue = resolver.resolveValueIfNecessary(originalValue);
                 //实现注入
-                BeanUtils.setProperty(bean,propertyName,resolveValue);
+                BeanUtils.setProperty(bean, propertyName, resolveValue);
             }
         } catch (Exception e) {
             throw new BeanCreationException("Failed to obtain BeanInfo for class[" + bd.getBeanClassName() + "]", e);
@@ -141,5 +155,40 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
 
     public ClassLoader getBeanClassLoader() {
         return (this.beanClassLoader != null ? this.beanClassLoader : ClassUtils.getDefaultClassLoader());
+    }
+
+    public void addBeanPostProcessor(BeanPostProcessor postProcessor) {
+        this.beanPostProcessors.add(postProcessor);
+    }
+
+    public List<BeanPostProcessor> getBeanPostProcessors() {
+        return this.beanPostProcessors;
+    }
+
+    public Object resolveDependency(DependencyDescriptor descriptor) {
+        Class<?> typeToMatch = descriptor.getDependencyType();
+        for (BeanDefinition bd : this.beanDefinitionMap.values()) {
+            //确保BeanDefinition 有Class对象
+            resolveBeanClass(bd);
+            Class<?> beanClass = bd.getBeanClass();
+            //1)isAssignableFrom方法判断A是否是B的父类或者和B类型相同或者B实现了A接口.是类与类之间的比较
+            //2)instanceOf方法判断A是否为B的实例，其中A为对象，B为类型.用来判断一个对象实例是否是一个类或接口的或其子类子接口的实例
+            if (typeToMatch.isAssignableFrom(beanClass)) {
+                return this.getBean(bd.getID());
+            }
+        }
+        return null;
+    }
+
+    public void resolveBeanClass(BeanDefinition bd) {
+        if (bd.hasBeanClass()) {
+            return;
+        } else {
+            try {
+                bd.resolveBeanClass(this.getBeanClassLoader());
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException("can't load class:" + bd.getBeanClassName());
+            }
+        }
     }
 }
