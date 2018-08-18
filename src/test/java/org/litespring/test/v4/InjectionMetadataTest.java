@@ -2,7 +2,7 @@ package org.litespring.test.v4;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.litespring.beans.factory.annotation.AutowiredFieldElment;
+import org.litespring.beans.factory.annotation.AutowiredFieldElement;
 import org.litespring.beans.factory.annotation.InjectionElement;
 import org.litespring.beans.factory.annotation.InjectionMetadata;
 import org.litespring.beans.factory.support.DefaultBeanFactory;
@@ -30,13 +30,13 @@ public class InjectionMetadataTest {
 
         {
             Field f = PetStoreService.class.getDeclaredField("accountDao");
-            InjectionElement injectionElement = new AutowiredFieldElment(f, true, factory);
+            InjectionElement injectionElement = new AutowiredFieldElement(f, true, factory);
             elements.add(injectionElement);
         }
 
         {
             Field f = PetStoreService.class.getDeclaredField("itemDao");
-            InjectionElement injectionElement = new AutowiredFieldElment(f, true, factory);
+            InjectionElement injectionElement = new AutowiredFieldElement(f, true, factory);
             elements.add(injectionElement);
         }
 

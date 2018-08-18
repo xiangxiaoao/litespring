@@ -44,7 +44,7 @@ public class AutowiredAnnotationProcessor implements InstantiationAwareBeanPostP
                         continue;
                     }
                     boolean required = determineRequiredStatus(ann);
-                    currElements.add(new AutowiredFieldElment(field, required, beanFactory));
+                    currElements.add(new AutowiredFieldElement(field, required, beanFactory));
                 }
             }
             for (Method method : targetClass.getDeclaredMethods()) {

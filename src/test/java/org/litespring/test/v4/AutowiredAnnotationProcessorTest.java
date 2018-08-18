@@ -3,7 +3,7 @@ package org.litespring.test.v4;
 import org.junit.Assert;
 import org.junit.Test;
 import org.litespring.beans.factory.annotation.AutowiredAnnotationProcessor;
-import org.litespring.beans.factory.annotation.AutowiredFieldElment;
+import org.litespring.beans.factory.annotation.AutowiredFieldElement;
 import org.litespring.beans.factory.annotation.InjectionElement;
 import org.litespring.beans.factory.annotation.InjectionMetadata;
 import org.litespring.beans.factory.config.DependencyDescriptor;
@@ -54,7 +54,7 @@ public class AutowiredAnnotationProcessorTest {
 
     private void assertFieldExists(List<InjectionElement> elements, String fieldName) {
         for (InjectionElement ele : elements) {
-            AutowiredFieldElment fieldEle = (AutowiredFieldElment) ele;
+            AutowiredFieldElement fieldEle = (AutowiredFieldElement) ele;
             Field f = fieldEle.getField();
             if (f.getName().equals(fieldName)) {
                 return;

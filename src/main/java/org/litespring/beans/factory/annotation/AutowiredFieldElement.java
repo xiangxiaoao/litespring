@@ -7,10 +7,10 @@ import org.litespring.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
 
-public class AutowiredFieldElment extends InjectionElement {
+public class AutowiredFieldElement extends InjectionElement {
     boolean required;
 
-    public AutowiredFieldElment(Field f, boolean required, AutowireCapableBeanFactory factory) {
+    public AutowiredFieldElement(Field f, boolean required, AutowireCapableBeanFactory factory) {
         super(f, factory);
         this.required = required;
     }
@@ -27,6 +27,7 @@ public class AutowiredFieldElment extends InjectionElement {
             Object value = factory.resolveDependency(desc);
             if (value != null) {
                 ReflectionUtils.makeAccessible(field);
+                //利用反射给字段Field 设置 具体 的 value
                 field.set(target, value);
             }
         } catch (Throwable e) {

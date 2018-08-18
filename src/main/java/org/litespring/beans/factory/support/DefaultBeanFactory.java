@@ -7,6 +7,7 @@ import org.litespring.beans.PropertyValue;
 import org.litespring.beans.SimpleTypeConverter;
 import org.litespring.beans.TypeConverter;
 import org.litespring.beans.factory.BeanCreationException;
+import org.litespring.beans.factory.NoSuchBeanDefinitionException;
 import org.litespring.beans.factory.config.BeanPostProcessor;
 import org.litespring.beans.factory.config.ConfigurableBeanFactory;
 import org.litespring.beans.factory.config.DependencyDescriptor;
@@ -57,6 +58,15 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
         return createBean(bd);
     }
 
+    public Class<?> getType(String name) throws NoSuchBeanDefinitionException {
+        BeanDefinition bd = this.getBeanDefinition(name);
+        if (bd == null) {
+            throw new NoSuchBeanDefinitionException(name);
+        }
+        resolveBeanClass(bd);
+        return bd.getBeanClass();
+    }
+
     private Object createBean(BeanDefinition bd) {
 
         //创建实例 instantiate：实例化
@@ -89,6 +99,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
     }
 
     private void populateBean(BeanDefinition bd, Object bean) {
+        //Autowired 注解注入
         for (BeanPostProcessor postProcessor : this.getBeanPostProcessors()) {
             if (postProcessor instanceof InstantiationAwareBeanPostProcessor) {
                 ((InstantiationAwareBeanPostProcessor) postProcessor).postProcessPropertyValues(bean, bd.getID());
@@ -185,6 +196,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
             return;
         } else {
             try {
+                //调用ClassLoader 加载类( loadClass.)
                 bd.resolveBeanClass(this.getBeanClassLoader());
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException("can't load class:" + bd.getBeanClassName());

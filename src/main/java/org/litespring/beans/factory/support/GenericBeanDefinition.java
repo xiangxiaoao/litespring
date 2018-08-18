@@ -84,7 +84,7 @@ public class GenericBeanDefinition implements BeanDefinition {
     }
 
     public boolean hasBeanClass() {
-        return false;
+        return this.beanClass!=null;
     }
 
     public void setBeanClassName(String beanClassName) {
