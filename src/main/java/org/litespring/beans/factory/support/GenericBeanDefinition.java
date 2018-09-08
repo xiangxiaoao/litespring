@@ -14,10 +14,11 @@ public class GenericBeanDefinition implements BeanDefinition {
     private boolean singleton = true;
     private boolean prototype = false;
     private String scope = SCOPE_DEFAULT;
-
     List<PropertyValue> propertyValues = new ArrayList<PropertyValue>();
-
     private ConstructorArgument constructorArgument = new ConstructorArgument();
+
+    //表明这个Bean定义是否是我们literspring自己合成的
+    private boolean isSynthetic = false;
 
     public GenericBeanDefinition() {
 
@@ -26,6 +27,11 @@ public class GenericBeanDefinition implements BeanDefinition {
     public GenericBeanDefinition(String id, String beanClassName) {
         this.id = id;
         this.beanClassName = beanClassName;
+    }
+
+    public GenericBeanDefinition(Class<?> clz) {
+        this.beanClass = clz;
+        this.beanClassName = clz.getName();
     }
 
     public boolean isSingleton() {
@@ -84,7 +90,11 @@ public class GenericBeanDefinition implements BeanDefinition {
     }
 
     public boolean hasBeanClass() {
-        return this.beanClass!=null;
+        return this.beanClass != null;
+    }
+
+    public boolean isSynthetic() {
+        return this.isSynthetic;
     }
 
     public void setBeanClassName(String beanClassName) {
@@ -93,5 +103,9 @@ public class GenericBeanDefinition implements BeanDefinition {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setSynthetic(boolean isSynthetic) {
+        this.isSynthetic = isSynthetic;
     }
 }

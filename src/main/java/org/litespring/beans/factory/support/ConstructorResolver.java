@@ -7,7 +7,6 @@ import org.litespring.beans.ConstructorArgument;
 import org.litespring.beans.SimpleTypeConverter;
 import org.litespring.beans.TypeConverter;
 import org.litespring.beans.factory.BeanCreationException;
-import org.litespring.beans.factory.config.ConfigurableBeanFactory;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
@@ -16,9 +15,10 @@ public class ConstructorResolver {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
-    private final ConfigurableBeanFactory beanFactory;
+    private final AbstractBeanFactory beanFactory;
 
-    public ConstructorResolver(ConfigurableBeanFactory beanFactory) {
+    public
+    ConstructorResolver(AbstractBeanFactory beanFactory) {
         this.beanFactory = beanFactory;
     }
 
@@ -27,13 +27,6 @@ public class ConstructorResolver {
         Object[] argsToUse = null;
         Class<?> beanClass = null;
 
-        //将RuntimeBeanReference或者TypedStringValue 转成真正的baen对象或者字符串
-        BeanDefinitionValueResolver valueResolver = new BeanDefinitionValueResolver(beanFactory);
-        //类型转换，将字符串转为数字类型或者布尔类型
-        TypeConverter typeConverter = new SimpleTypeConverter();
-        //获取BeanDefinition的ConstructorArgument
-        ConstructorArgument cargs = bd.getConstructorArgument();
-
         try {
             beanClass = this.beanFactory.getBeanClassLoader().loadClass(bd.getBeanClassName());
         } catch (ClassNotFoundException e) {
@@ -41,6 +34,14 @@ public class ConstructorResolver {
         }
         //获取bean的所有构造函数类
         Constructor<?>[] canditates = beanClass.getConstructors();
+
+        //将RuntimeBeanReference或者TypedStringValue 转成真正的baen对象或者字符串
+        BeanDefinitionValueResolver valueResolver = new BeanDefinitionValueResolver(beanFactory);
+        //类型转换，将字符串转为数字类型或者布尔类型
+        TypeConverter typeConverter = new SimpleTypeConverter();
+        //获取BeanDefinition的ConstructorArgument
+        ConstructorArgument cargs = bd.getConstructorArgument();
+
         for (int i = 0; i < canditates.length; i++) {
             //获取当前构造器的所有参数类型
             Class<?>[] parameterTypes = canditates[i].getParameterTypes();

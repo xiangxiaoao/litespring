@@ -16,6 +16,9 @@ public class ConstructorArgument {
         this.argumentValues.add(valueHolder);
     }
 
+    public void addArgumentValue(Object value) {
+        this.argumentValues.add(new ValueHolder(value));
+    }
 
     public int getArgumentCount() {
         return this.argumentValues.size();
@@ -24,6 +27,7 @@ public class ConstructorArgument {
     public List<ValueHolder> getArgumentValues() {
         return Collections.unmodifiableList(this.argumentValues);
     }
+
 
     public boolean isEmpty() {
         return this.argumentValues.isEmpty();
@@ -76,5 +80,6 @@ public class ConstructorArgument {
         public void setName(String name) {
             this.name = name;
         }
+
     }
 }

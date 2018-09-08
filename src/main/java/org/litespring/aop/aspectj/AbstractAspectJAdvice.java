@@ -2,23 +2,24 @@ package org.litespring.aop.aspectj;
 
 import org.litespring.aop.Advice;
 import org.litespring.aop.Pointcut;
+import org.litespring.aop.config.AspectInstanceFactory;
 
 import java.lang.reflect.Method;
 
-public abstract class AbstractAspectJAdvice  implements Advice {
+public abstract class AbstractAspectJAdvice implements Advice {
 
     private Method adviceMethod;
     private AspectJExpressionPointcut pointcut;
-    private Object adviceObject;
+    protected AspectInstanceFactory adviceObjectFactory;
 
-    public AbstractAspectJAdvice(Method adviceMethod, AspectJExpressionPointcut pointcut, Object adviceObject) {
+    public AbstractAspectJAdvice(Method adviceMethod, AspectJExpressionPointcut pointcut, AspectInstanceFactory adviceObjectFactory) {
         this.adviceMethod = adviceMethod;
         this.pointcut = pointcut;
-        this.adviceObject = adviceObject;
+        this.adviceObjectFactory = adviceObjectFactory;
     }
 
     public void invokeAdviceMethod() throws Throwable {
-        adviceMethod.invoke(adviceObject);
+        adviceMethod.invoke(adviceObjectFactory.getAspectInstance());
     }
 
     public Method getAdviceMethod() {
@@ -29,4 +30,7 @@ public abstract class AbstractAspectJAdvice  implements Advice {
         return this.pointcut;
     }
 
+    public Object getAdviceInstance() throws Exception {
+        return adviceObjectFactory.getAspectInstance();
+    }
 }

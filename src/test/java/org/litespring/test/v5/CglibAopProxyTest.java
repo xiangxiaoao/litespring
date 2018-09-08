@@ -6,31 +6,36 @@ import org.junit.Test;
 import org.litespring.aop.aspectj.AspectJAfterReturningAdvice;
 import org.litespring.aop.aspectj.AspectJBeforeAdvice;
 import org.litespring.aop.aspectj.AspectJExpressionPointcut;
+import org.litespring.aop.config.AspectInstanceFactory;
 import org.litespring.aop.framework.AopConfig;
 import org.litespring.aop.framework.AopConfigSupport;
 import org.litespring.aop.framework.CglibProxyFactory;
+import org.litespring.beans.factory.BeanFactory;
 import org.litespring.service.v5.PetStoreService;
-import org.litespring.tx.TransactionManager;
 import org.litespring.util.MessageTracker;
 
 import java.util.List;
 
-public class CglibAopProxyTest {
+public class CglibAopProxyTest extends AbstractV5Test {
     private AspectJBeforeAdvice beforeAdvice = null;
     private AspectJAfterReturningAdvice afterAdvice = null;
-    private AspectJExpressionPointcut pointcut = null;
-    private PetStoreService petStoreService = null;
-    private TransactionManager tx;
+    private AspectJExpressionPointcut pc = null;
+    private BeanFactory beanFactory = null;
+    private AspectInstanceFactory aspectInstanceFactory = null;
 
     @Before
     public void setUp() throws Exception {
-        petStoreService = new PetStoreService();
-        tx = new TransactionManager();
+        MessageTracker.clearMsg();
         String expression = "execution(* org.litespring.service.v5.*.placeOrder(..))";
-        pointcut = new AspectJExpressionPointcut();
-        pointcut.setExpression(expression);
-        beforeAdvice = new AspectJBeforeAdvice(TransactionManager.class.getMethod("start"), pointcut, tx);
-        afterAdvice = new AspectJAfterReturningAdvice(TransactionManager.class.getMethod("commit"), pointcut, tx);
+        pc = new AspectJExpressionPointcut();
+        pc.setExpression(expression);
+
+        beanFactory = this.getBeanFactory("petstore-v5.xml");
+        aspectInstanceFactory = this.getAspectInstanceFactory("tx");
+        aspectInstanceFactory.setBeanFactory(beanFactory);
+
+        beforeAdvice = new AspectJBeforeAdvice(getAdviceMethod("start"), pc, aspectInstanceFactory);
+        afterAdvice = new AspectJAfterReturningAdvice(getAdviceMethod("commit"), pc, aspectInstanceFactory);
     }
 
     @Test
@@ -38,7 +43,7 @@ public class CglibAopProxyTest {
         AopConfig config = new AopConfigSupport();
         config.addAdvice(beforeAdvice);
         config.addAdvice(afterAdvice);
-        config.setTargetObject(petStoreService);
+        config.setTargetObject(new PetStoreService());
 
         CglibProxyFactory proxyFactory = new CglibProxyFactory(config);
         PetStoreService proxy = (PetStoreService) proxyFactory.getProxy();

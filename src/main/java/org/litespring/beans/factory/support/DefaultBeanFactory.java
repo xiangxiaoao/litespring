@@ -2,14 +2,11 @@ package org.litespring.beans.factory.support;
 
 
 import org.apache.commons.beanutils.BeanUtils;
-import org.litespring.beans.BeanDefinition;
-import org.litespring.beans.PropertyValue;
-import org.litespring.beans.SimpleTypeConverter;
-import org.litespring.beans.TypeConverter;
+import org.litespring.beans.*;
 import org.litespring.beans.factory.BeanCreationException;
+import org.litespring.beans.factory.BeanFactoryAware;
 import org.litespring.beans.factory.NoSuchBeanDefinitionException;
 import org.litespring.beans.factory.config.BeanPostProcessor;
-import org.litespring.beans.factory.config.ConfigurableBeanFactory;
 import org.litespring.beans.factory.config.DependencyDescriptor;
 import org.litespring.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.litespring.util.ClassUtils;
@@ -22,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory, BeanDefinitionRegistry {
+public class DefaultBeanFactory extends AbstractBeanFactory implements BeanDefinitionRegistry {
 
 
     private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>();
@@ -67,7 +64,27 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
         return bd.getBeanClass();
     }
 
-    private Object createBean(BeanDefinition bd) {
+    public List<Object> getBeansByType(Class<?> type) {
+        List<Object> result = new ArrayList<Object>();
+        List<String> beanIDs = this.getBeanIDsByType(type);
+        for (String beanID : beanIDs) {
+            result.add(this.getBean(beanID));
+        }
+        return result;
+    }
+
+    private List<String> getBeanIDsByType(Class<?> type) {
+        List<String> result = new ArrayList<String>();
+        for (String beanName : this.beanDefinitionMap.keySet()) {
+            if (type.isAssignableFrom(this.getType(beanName))) {
+                result.add(beanName);
+            }
+        }
+        return result;
+    }
+
+
+    protected Object createBean(BeanDefinition bd) {
 
         //创建实例 instantiate：实例化
         Object bean = instantiateBean(bd);
@@ -75,6 +92,7 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
         //设置属性 populate:填充
         populateBean(bd, bean);
 
+        bean = initializeBean(bd,bean);
         //用Commons BeanUtils工具包来填充
         //populateBeanUseCommonBeanUtils(bd,bean);
 
@@ -201,6 +219,33 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements 
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException("can't load class:" + bd.getBeanClassName());
             }
+        }
+    }
+
+    protected Object initializeBean(BeanDefinition bd, Object bean) {
+        invokeAwareMehtods(bean);
+        //Todo,对Bean做初始化
+        //创建代理
+        if(!bd.isSynthetic()){
+             return applyBeanPostProcessorsAfterInitialization(bean,bd.getID());
+        }
+        return bean;
+    }
+
+   public Object applyBeanPostProcessorsAfterInitialization(Object existingBean,String beanName) throws BeansException {
+         Object result = existingBean;
+         for(BeanPostProcessor beanProcessor:getBeanPostProcessors()){
+             result = beanProcessor.afterInitialization(result,beanName);
+             if(result == null){
+                 return result;
+             }
+         }
+         return result;
+   }
+
+    private void invokeAwareMehtods(final Object bean) {
+        if (bean instanceof BeanFactoryAware) {
+            ((BeanFactoryAware) bean).setBeanFactory(this);
         }
     }
 }

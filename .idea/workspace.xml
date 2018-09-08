@@ -2,23 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5693e93-dbff-41b6-854f-5ab0e44b3331" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactoryAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/FactoryBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJBeforeAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJBeforeAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/ConstructorArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/ConstructorArgument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanDefinitionStoreException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanDefinitionStoreException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredAnnotationProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredAnnotationProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredFieldElment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredFieldElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionValueResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionValueResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/util/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/util/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/AutowiredAnnotationProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/AutowiredAnnotationProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/InjectionMetadataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/InjectionMetadataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/litespring/util/ClassUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/litespring/util/ClassUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/litespring/test/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/litespring/test/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/petstore-v1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/petstore-v1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/BeanDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/BeanDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/BeanDefinitionStoreException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/BeanDefinitionStoreException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/BeanFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/support/DefaultBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/support/DefaultBeanFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/support/GenericBeanDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/support/GenericBeanDefinition.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/context/support/AbstractApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/context/support/AbstractApplicationContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/util/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/util/StringUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/context/support/FileSystemXmlApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/context/support/FileSystemXmlApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/litespring/util/ClassUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/litespring/util/ClassUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/litespring/test/AllTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/litespring/test/AllTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/petstore-v1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/petstore-v1.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,6 +50,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/litespring$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1529827904750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.litespring.test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/litespring$BeanFactoryTestV5_testGetBeanByType.ic" NAME="BeanFactoryTestV5.testGetBeanByType Coverage Results" MODIFIED="1534657937081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.litespring.test.v5.*</FILTER>
     </SUITE>
   </component>
   <component name="DatabaseView">
@@ -51,7 +70,29 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BeanDefinitionTestV5.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/BeanDefinitionTestV5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="petstore-v5.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/petstore-v5.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="74" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,6 +130,7 @@
       <find>ReflectiveMethodInvocation</find>
       <find>Abstract</find>
       <find>Genera</find>
+      <find>getBeanDefinition</find>
     </findStrings>
     <dirStrings>
       <dir>E:\spring-workspace\litespring\src\main\java\org\litespring\beans\factory\support</dir>
@@ -119,33 +161,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/InjectionMetadataTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/util/ReflectionUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredFieldElment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/core/annotation/AnnotationUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/AutowiredAnnotationProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/BeanPostProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/InstantiationAwareBeanPostProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/ConfigurableBeanFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredAnnotationProcessor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v4/V4AllTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredFieldElement.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/dao/v5/AccountDao.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/petstore-v5.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/util/MessageTracker.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ApplicationContextTest5.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/MethodMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/PointCut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/util/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJExpressionPointcut.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/PointcutTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/MethodLocatingFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/NoSuchBeanDefinitionException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultBeanFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/tx/TransactionManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/litespring/tx/TransactionManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -153,23 +173,45 @@
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/Advice.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/ReflectiveMethodInvocation.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/litespring/service/v5/PetStoreService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CGLibTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopProxyFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/AopInvocationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfigException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfigSupport.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJBeforeAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/CglibProxyFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactoryAware.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/config/AspectInstanceFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/FactoryBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/config/MethodLocatingFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJBeforeAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/AbstractV5Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanDefinitionStoreException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionReaderUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/ConstructorArgument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/config/ConfigBeanDefinitionParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/config/AspectInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/AbstractBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/BeanFactoryTestV5.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/petstore-v5.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionValueResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/util/ClassUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAutoProxyCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/AllTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/V5AllTests.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/petstore-v1.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/org/litespring/test/v5/BeanDefinitionTestV5.java" />
       </list>
     </option>
   </component>
@@ -203,11 +245,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-25" />
-    <option name="y" value="15" />
-    <option name="width" value="1919" />
-    <option name="height" value="997" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="450" />
+    <option name="y" value="81" />
+    <option name="width" value="1694" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -218,7 +260,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,30 +267,144 @@
               <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
               <item name="litespring" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+              <item name="aspectj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="litespring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="litespring" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="v5" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="petstore-v1.xml&#9;FILE&#9;file://E:/spring-workspace/litespring/src/test/resources/petstore-v1.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/GitHub/litespring" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="two.files.diff.last.used.file" value="E:/GitHub/litespring/src/main/java/org/litespring/beans/factory/support/BeanDefinitionValueResolver.java" />
+    <property name="two.files.diff.last.used.folder" value="E:/GitHub/litespring" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\spring-workspace\litespring\src\test\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.litespring.tx" />
       <recent name="org.litespring.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\spring-workspace\litespring\src\main\java\org\litespring\beans\factory\support" />
       <recent name="E:\spring-workspace\litespring\lib" />
       <recent name="E:\spring-workspace\litespring\src\test\resources" />
       <recent name="E:\spring-workspace\litespring\src\test\java\org\litespring\dao\v5" />
@@ -268,9 +423,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationContextTest5.testPlaceOrder">
+  <component name="RunManager" selected="JUnit.BeanDefinitionTestV5.testAOPBean">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="litespring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.litespring.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.litespring.test" />
+      <option name="MAIN_CLASS_NAME" value="org.litespring.test.AllTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ApplicationContextTest5.testPlaceOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="litespring" />
@@ -295,7 +473,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CGLibTest.testCallBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BeanDefinitionTestV5.testAOPBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="litespring" />
       <extension name="coverage">
         <pattern>
@@ -306,8 +484,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.litespring.test.v5" />
-      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.CGLibTest" />
-      <option name="METHOD_NAME" value="testCallBack" />
+      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.BeanDefinitionTestV5" />
+      <option name="METHOD_NAME" value="testAOPBean" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -318,7 +496,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CGLibTest.testFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BeanFactoryTestV5.testGetBeanByType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="litespring" />
       <extension name="coverage">
         <pattern>
@@ -329,8 +507,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.litespring.test.v5" />
-      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.CGLibTest" />
-      <option name="METHOD_NAME" value="testFilter" />
+      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.BeanFactoryTestV5" />
+      <option name="METHOD_NAME" value="testGetBeanByType" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -341,7 +519,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CglibAopProxyTest.testGetProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="V5AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="litespring" />
       <extension name="coverage">
         <pattern>
@@ -352,32 +530,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.litespring.test.v5" />
-      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.CglibAopProxyTest" />
-      <option name="METHOD_NAME" value="testGetProxy" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ReflectiveMethodInvocationTest.testAfterThrowing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="litespring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.litespring.test.v5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.litespring.test.v5" />
-      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.ReflectiveMethodInvocationTest" />
-      <option name="METHOD_NAME" value="testAfterThrowing" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.litespring.test.v5.V5AllTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -408,19 +563,19 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ReflectiveMethodInvocationTest.testAfterThrowing" />
-      <item itemvalue="JUnit.CGLibTest.testCallBack" />
-      <item itemvalue="JUnit.CGLibTest.testFilter" />
-      <item itemvalue="JUnit.CglibAopProxyTest.testGetProxy" />
+      <item itemvalue="JUnit.BeanFactoryTestV5.testGetBeanByType" />
       <item itemvalue="JUnit.ApplicationContextTest5.testPlaceOrder" />
+      <item itemvalue="JUnit.V5AllTests" />
+      <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.BeanDefinitionTestV5.testAOPBean" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeanDefinitionTestV5.testAOPBean" />
+        <item itemvalue="JUnit.AllTests" />
+        <item itemvalue="JUnit.V5AllTests" />
         <item itemvalue="JUnit.ApplicationContextTest5.testPlaceOrder" />
-        <item itemvalue="JUnit.CglibAopProxyTest.testGetProxy" />
-        <item itemvalue="JUnit.CGLibTest.testFilter" />
-        <item itemvalue="JUnit.CGLibTest.testCallBack" />
-        <item itemvalue="JUnit.ReflectiveMethodInvocationTest.testAfterThrowing" />
+        <item itemvalue="JUnit.BeanFactoryTestV5.testGetBeanByType" />
       </list>
     </recent_temporary>
   </component>
@@ -451,7 +606,10 @@
       <workItem from="1533136695150" duration="2810000" />
       <workItem from="1533349050351" duration="18716000" />
       <workItem from="1534078882350" duration="559000" />
-      <workItem from="1534551292131" duration="11937000" />
+      <workItem from="1534551292131" duration="16703000" />
+      <workItem from="1534577693705" duration="3798000" />
+      <workItem from="1534648223270" duration="15442000" />
+      <workItem from="1536374850301" duration="11993000" />
     </task>
     <task id="LOCAL-00001" summary="use Commons BeanUtils to populate Bean">
       <created>1530346115112</created>
@@ -488,75 +646,112 @@
       <option name="project" value="LOCAL" />
       <updated>1532272402014</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="auto-scan">
+      <created>1534570081557</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534570081557</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReflectiveMethodInvocationTest_testAfterThrowing - 2018.08.04 at 14h 06m 02s.xml">
-      <configuration name="ReflectiveMethodInvocationTest.testAfterThrowing" configurationId="JUnit" />
+    <history-entry file="BeanFactoryTestV5_testGetBeanByType - 2018.08.19 at 14h 57m 16s.xml">
+      <configuration name="BeanFactoryTestV5.testGetBeanByType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReflectiveMethodInvocationTest_testAfterThrowing - 2018.08.04 at 14h 06m 11s.xml">
-      <configuration name="ReflectiveMethodInvocationTest.testAfterThrowing" configurationId="JUnit" />
+    <history-entry file="BeanFactoryTestV5_testGetBeanByType - 2018.08.19 at 15h 00m 57s.xml">
+      <configuration name="BeanFactoryTestV5.testGetBeanByType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CGLibTest_testCallBack - 2018.08.04 at 14h 26m 12s.xml">
-      <configuration name="CGLibTest.testCallBack" configurationId="JUnit" />
+    <history-entry file="BeanFactoryTestV5_testGetBeanByType - 2018.08.19 at 15h 07m 08s.xml">
+      <configuration name="BeanFactoryTestV5.testGetBeanByType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CGLibTest_testCallBack - 2018.08.04 at 14h 27m 13s.xml">
-      <configuration name="CGLibTest.testCallBack" configurationId="JUnit" />
+    <history-entry file="BeanFactoryTestV5_testGetBeanByType - 2018.08.19 at 15h 07m 17s.xml">
+      <configuration name="BeanFactoryTestV5.testGetBeanByType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CGLibTest_testCallBack - 2018.08.04 at 14h 32m 32s.xml">
-      <configuration name="CGLibTest.testCallBack" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CGLibTest_testFilter - 2018.08.04 at 14h 39m 44s.xml">
-      <configuration name="CGLibTest.testFilter" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CglibAopProxyTest_testGetProxy - 2018.08.04 at 16h 30m 18s.xml">
-      <configuration name="CglibAopProxyTest.testGetProxy" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CglibAopProxyTest_testGetProxy - 2018.08.04 at 16h 36m 38s.xml">
-      <configuration name="CglibAopProxyTest.testGetProxy" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CglibAopProxyTest_testGetProxy - 2018.08.04 at 16h 41m 14s.xml">
-      <configuration name="CglibAopProxyTest.testGetProxy" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationContextTest5_testPlaceOrder - 2018.08.18 at 09h 01m 08s.xml">
+    <history-entry file="ApplicationContextTest5_testPlaceOrder - 2018.08.19 at 15h 46m 20s.xml">
       <configuration name="ApplicationContextTest5.testPlaceOrder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="V5AllTests - 2018.08.19 at 15h 50m 59s.xml">
+      <configuration name="V5AllTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.08.19 at 15h 51m 16s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.08.19 at 15h 53m 00s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BeanDefinitionTestV5_testAOPBean - 2018.09.08 at 14h 54m 03s.xml">
+      <configuration name="BeanDefinitionTestV5.testAOPBean" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BeanDefinitionTestV5_testAOPBean - 2018.09.08 at 14h 54m 34s.xml">
+      <configuration name="BeanDefinitionTestV5.testAOPBean" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195032000" />
+    <option name="totallyTimeSpent" value="231031000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-20" y="12" width="1535" height="797" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="14" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.24778761" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.033923306" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32885906" />
+      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32870772" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="JRebel Executor" order="5" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.37159532" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.37362638" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.17551622" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32879376" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.23899797" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.21733244" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.15651503" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.2467232" />
       <window_info id="JRebel" order="0" side_tool="true" />
       <window_info anchor="right" id="Database" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.5117994" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.28031808" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.41887906" />
-      <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.61504424" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="JRebel" order="0" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.2467232" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.30235988" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.15651503" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="1" weight="0.37159532" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.033923306" />
+      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.28031808" />
+      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32870772" />
+      <window_info anchor="right" id="Database" order="1" weight="0.32954547" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32879376" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Executor" order="5" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.61504424" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
+      <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -611,67 +806,149 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/AbstractV5Test.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="65" />
+      <option name="time" value="91" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v3/ApplicationTestV3.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="104">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v3/BeanDefinitionTestV3.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/AbstractV5Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfigSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/util/ClassUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1563">
+          <caret line="1245" column="47" lean-forward="true" selection-start-line="1245" selection-start-column="47" selection-end-line="1245" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#51461#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2491#2511#0" expanded="true" />
+            <element signature="e#2748#2768#0" expanded="true" />
+            <element signature="e#2999#3017#0" expanded="true" />
+            <element signature="e#3274#3292#0" expanded="true" />
+            <element signature="e#4101#4111#0" expanded="true" />
+            <element signature="e#14801#14802#0" expanded="true" />
+            <element signature="e#14869#14870#0" expanded="true" />
+            <element signature="e#18805#18806#0" expanded="true" />
+            <element signature="e#18865#18866#0" expanded="true" />
+            <element signature="e#27484#27492#0" expanded="true" />
+            <element signature="e#29375#29383#0" expanded="true" />
+            <element signature="e#45175#45176#0" expanded="true" />
+            <element signature="e#45235#45236#0" expanded="true" />
+            <element signature="e#47767#47774#0" expanded="true" />
+            <element signature="e#50836#50837#0" expanded="true" />
+            <element signature="e#50895#50896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/annotation/AutowiredAnnotationProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ApplicationContextTest5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v4/V4AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/V5AllTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/ApplicationTestV2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/AllTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/BeanDefinitionTestV2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/BeanDefinitionValueResolverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/CustomBooleanEditorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/CustomNumberEditorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v2/TypeConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="64">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -682,323 +959,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/MethodLocatingFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/petstore-v1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="154">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/Pointcut.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-794">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJExpressionPointcut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1520">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/BeanFactoryTestV5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultSingletonBeanRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/SingletonBeanRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/MethodMatcher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/AbstractBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/AutowireCapableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/BeanPostProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/PointcutTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopProxyFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="-54">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/Advice.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/xml/XmlBeanDefinitionReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="364">
+          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/tx/TransactionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionReaderUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/aop/Advice.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/Interceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state relative-caret-position="430">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/service/v5/PetStoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
+        <state relative-caret-position="110">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ApplicationContextTest5.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/tx/TransactionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="242">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/MethodInterceptor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactoryAware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="-44">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="308">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopConfigSupport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAutoProxyCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/ReflectiveMethodInvocationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="232">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/Joinpoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/Invocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/AopProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/MethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spring-core-cglib-3.2.18.RELEASE.jar!/org/springframework/cglib/proxy/CallbackFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CGLibTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-392">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/context/ApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-          <folding>
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/ReflectiveMethodInvocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/framework/CglibProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="184" column="47" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6595#6596#0" expanded="true" />
-            <element signature="e#6639#6640#0" expanded="true" />
-            <element signature="e#8302#8303#0" expanded="true" />
-            <element signature="e#8346#8347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/CglibAopProxyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/weaver/internal/tools/PointcutExpressionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1716">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/weaver/tools/PointcutExpression.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterThrowingAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJAfterReturningAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/petstore-v5.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="8" column="78" lean-forward="true" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJExpressionPointcut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/BeansException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/config/AspectInstanceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="146">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/BeanDefinitionValueResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/ConstructorResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="77" column="3" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/DefaultBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="236" column="22" lean-forward="true" selection-start-line="236" selection-start-column="22" selection-end-line="236" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#7255#7256#0" expanded="true" />
+            <element signature="e#7301#7302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/support/GenericBeanDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanDefinitionStoreException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/config/ConfigBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2377#2393#0" expanded="true" />
+            <element signature="e#2462#2484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/MethodLocatingFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/config/MethodLocatingFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/FactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/BeanFactoryAware.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="132">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/BeanUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/ConstructorArgument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
-          <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/config/MethodLocatingFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="201">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
-            <element signature="e#1700#1701#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/context/support/AbstractApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AspectJBeforeAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="308">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/aop/aspectj/AbstractAspectJAdvice.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/litespring/beans/factory/config/RuntimeBeanReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/petstore-v5.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/litespring/test/v5/BeanDefinitionTestV5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
