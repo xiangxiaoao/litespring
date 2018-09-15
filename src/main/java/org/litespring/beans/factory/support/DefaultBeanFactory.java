@@ -2,6 +2,8 @@ package org.litespring.beans.factory.support;
 
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.litespring.beans.*;
 import org.litespring.beans.factory.BeanCreationException;
 import org.litespring.beans.factory.BeanFactoryAware;
@@ -21,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class DefaultBeanFactory extends AbstractBeanFactory implements BeanDefinitionRegistry {
 
+    private final static Log logger = LogFactory.getLog(DefaultBeanFactory.class);
 
     private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>();
 
@@ -76,7 +79,14 @@ public class DefaultBeanFactory extends AbstractBeanFactory implements BeanDefin
     private List<String> getBeanIDsByType(Class<?> type) {
         List<String> result = new ArrayList<String>();
         for (String beanName : this.beanDefinitionMap.keySet()) {
-            if (type.isAssignableFrom(this.getType(beanName))) {
+            Class<?> beanClass = null;
+            try {
+                beanClass = this.getType(beanName);
+            } catch (NoSuchBeanDefinitionException e) {
+                logger.warn("can't load class for bean:" + beanName + ", skip it.");
+                continue;
+            }
+            if (beanClass != null && type.isAssignableFrom(this.getType(beanName))) {
                 result.add(beanName);
             }
         }
@@ -92,7 +102,7 @@ public class DefaultBeanFactory extends AbstractBeanFactory implements BeanDefin
         //设置属性 populate:填充
         populateBean(bd, bean);
 
-        bean = initializeBean(bd,bean);
+        bean = initializeBean(bd, bean);
         //用Commons BeanUtils工具包来填充
         //populateBeanUseCommonBeanUtils(bd,bean);
 
@@ -226,22 +236,22 @@ public class DefaultBeanFactory extends AbstractBeanFactory implements BeanDefin
         invokeAwareMehtods(bean);
         //Todo,对Bean做初始化
         //创建代理
-        if(!bd.isSynthetic()){
-             return applyBeanPostProcessorsAfterInitialization(bean,bd.getID());
+        if (!bd.isSynthetic()) {
+            return applyBeanPostProcessorsAfterInitialization(bean, bd.getID());
         }
         return bean;
     }
 
-   public Object applyBeanPostProcessorsAfterInitialization(Object existingBean,String beanName) throws BeansException {
-         Object result = existingBean;
-         for(BeanPostProcessor beanProcessor:getBeanPostProcessors()){
-             result = beanProcessor.afterInitialization(result,beanName);
-             if(result == null){
-                 return result;
-             }
-         }
-         return result;
-   }
+    public Object applyBeanPostProcessorsAfterInitialization(Object existingBean, String beanName) throws BeansException {
+        Object result = existingBean;
+        for (BeanPostProcessor beanProcessor : getBeanPostProcessors()) {
+            result = beanProcessor.afterInitialization(result, beanName);
+            if (result == null) {
+                return result;
+            }
+        }
+        return result;
+    }
 
     private void invokeAwareMehtods(final Object bean) {
         if (bean instanceof BeanFactoryAware) {
